@@ -1,0 +1,83 @@
+Screen {
+    background: $background;
+    color: $text;
+}
+
+#layout, #login-wrap {
+    height: 100%;
+}
+
+#left-rail {
+    width: 26;
+    min-width: 24;
+    background: $surface;
+    border-right: solid $primary;
+    padding: 1;
+}
+
+#brand {
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+}
+
+#main-pane {
+    width: 1fr;
+    padding: 1 2;
+}
+
+#right-rail {
+    width: 34;
+    min-width: 30;
+    background: $surface;
+    border-left: solid $primary;
+    padding: 1;
+}
+
+.screen-title {
+    text-style: bold;
+    color: $accent;
+    height: 1;
+    margin-bottom: 1;
+}
+
+.rail-title {
+    text-style: bold;
+    color: $secondary;
+    margin-top: 1;
+}
+
+.panel {
+    border: solid $panel;
+    padding: 1;
+    margin: 1 0;
+}
+
+.approval-bar {
+    dock: bottom;
+    height: 3;
+    background: $warning;
+    color: $text;
+    padding: 1;
+}
+
+DataTable {
+    height: 1fr;
+    border: solid $panel;
+}
+
+Input {
+    margin: 1 0;
+}
+
+Markdown {
+    height: 1fr;
+    border: solid $panel;
+    padding: 1;
+}
+
+Log {
+    height: 1fr;
+    border: solid $panel;
+}
+
