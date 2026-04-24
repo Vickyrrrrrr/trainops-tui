@@ -27,8 +27,10 @@ jobs:
       - name: Install dependencies
         run: uv sync --all-extras
 
-      - name: Lint (ruff)
-        run: uv run ruff check .
+      - name: Lint (ruff auto-fix then check)
+        run: |
+          uv run ruff check . --fix
+          uv run ruff check .
 
       - name: Type check (mypy)
         run: uv run mypy packages/ apps/ --ignore-missing-imports

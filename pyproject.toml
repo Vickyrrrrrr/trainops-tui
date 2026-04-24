@@ -86,6 +86,20 @@ target-version = "py312"
 select = ["E", "F", "I", "B", "UP", "ASYNC", "S"]
 ignore = ["E501", "S101", "S104", "S105", "S113", "ASYNC240"]
 
+[tool.ruff.lint.isort]
+known-first-party = [
+  "trainops_tui",
+  "trainops_agents",
+  "trainops_api",
+  "trainops_worker",
+  "trainops_connectors",
+  "trainops_common",
+  "trainops_domain",
+  "trainops_docsgen",
+  "trainops_observability",
+  "trainops_prompts",
+]
+
 [tool.mypy]
 python_version = "3.12"
 strict = true

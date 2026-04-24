@@ -4,6 +4,7 @@ falls back to deterministic stub when no key is present (CI / dry-run mode).
 from __future__ import annotations
 
 import asyncio
+import concurrent.futures
 from decimal import Decimal
 from typing import Any
 
@@ -50,7 +51,6 @@ class AgentPlanner:
         try:
             loop = asyncio.get_event_loop()
             if loop.is_running():
-                import concurrent.futures
                 with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
                     fut = pool.submit(asyncio.run, coro)
                     return fut.result()
