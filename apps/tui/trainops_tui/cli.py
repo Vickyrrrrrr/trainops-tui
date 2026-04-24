@@ -4,7 +4,6 @@ Runs first-time init wizard if config is missing, then launches the TUI.
 from __future__ import annotations
 
 import sys
-from pathlib import Path
 
 from trainops_tui.config import CONFIG_PATH, load_config
 from trainops_tui.wizard import run_wizard
